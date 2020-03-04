@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Booking Room</string>
+    <string name="lbl_gmail">E-mail</string>
+    <string name="hint_email">yourname@gmail.com</string>
+    <string name="lbl_psw">Password</string>
+    <string name="hint_password">************</string>
+    <string name="remember">Nhớ tài khoản</string>
+    <string name="forgot_psw">Quên mật khẩu</string>
+    <string name="btn_login">Đăng Nhập</string>
+    <string name="create_user">Tạo tài khoản</string>
+    <string name="ed_create_user_name">Tên tài khoản</string>
+    <string name="ed_create_psw">Mật khẩu</string>
+    <string name="ed_customer">Tên người dùng</string>
+    <string name="btn_register">Tạo</string>
+
+    <string name="lbl_check_mail">Nhập mã xác nhập đã được gửi về mail để xác nhận tài khoản</string>
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
+
+</resources>

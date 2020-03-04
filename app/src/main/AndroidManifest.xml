@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.booking">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_app"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        <activity android:name=".activity.ActivityInfoHotel"></activity>
+        <activity android:name=".activity.ActivityChangePassword" />
+        <activity android:name=".activity.ActivitySetupNewPassword" />
+        <activity android:name=".activity.ActivityCheckMailForgot" />
+        <activity android:name=".activity.ActivityInfoCustomer" />
+        <activity android:name=".activity.ActivityCheckGmail" />
+        <activity android:name=".activity.ActivityHistory" />
+        <activity android:name=".activity.ActivityForgotPsw" />
+        <activity android:name=".activity.ActivityCustomer" />
+        <activity android:name=".activity.ActivityCreateUser" />
+        <activity android:name=".activity.ActivityLogin" />
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
