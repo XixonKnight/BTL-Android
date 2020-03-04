@@ -486,9 +486,9 @@ public class ActivityCustomer extends AppCompatActivity {
         Log.d(TAG, "onPause: ");
     }
 
-    public void setClickRecyclerView(int id) {
+    public void setClickRecyclerView(Hotel hotel) {
         Intent intent = new Intent(this, ActivityInfoHotel.class);
-        intent.putExtra("idHotel", id);
+        intent.putExtra("hotel", hotel);
         startActivity(intent);
     }
 }

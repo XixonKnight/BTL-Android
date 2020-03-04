@@ -34,7 +34,6 @@
             app:tabBackground="@drawable/indicator_flag"
             app:tabGravity="center" />
 
-
         <LinearLayout
             android:id="@+id/select_area"
             android:layout_width="match_parent"

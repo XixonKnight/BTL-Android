@@ -13,6 +13,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
+import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -26,6 +28,7 @@ import com.example.booking.constant.Constant;
 import com.example.booking.controller.adapter.SlideHotelAdapter;
 import com.example.booking.controller.adapter.SlideTypeRoomAdapter;
 import com.example.booking.model.TypeRoom;
+import com.example.booking.model.dbo.Hotel;
 import com.example.booking.model.dbo.ImageRoom;
 import com.google.android.material.tabs.TabLayout;
 
@@ -44,10 +47,12 @@ public class ActivityInfoHotel extends AppCompatActivity {
     private ViewPager viewPager;
     private RecyclerView recyclerView;
     private Handler handler;
-    private int idHotel;
+    //    private int idHotel;
+    private Hotel hotel;
     private TabLayout tabLayout;
     private List<ImageRoom> imageRoomList;
     private List<TypeRoom> typeRoomList;
+    private TextView lblNameHotel, lblAddressHotel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +74,7 @@ public class ActivityInfoHotel extends AppCompatActivity {
                         imageRoomList = new ArrayList<>();
                         imageRoomList.addAll((Collection<? extends ImageRoom>) msg.obj);
                         customImageHotel(imageRoomList);
+                        setupInfoHotel(hotel);
                         break;
                     }
                     case MESSAGE_SELECT_TYPE_ROOM: {
@@ -83,12 +89,18 @@ public class ActivityInfoHotel extends AppCompatActivity {
 
     }
 
+    private void setupInfoHotel(Hotel hotel) {
+        lblNameHotel.setText(hotel.getName());
+        lblAddressHotel.setText(hotel.getAddress());
+    }
+
     private void customTypeRoom(List<TypeRoom> list) {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         DividerItemDecoration decoration = new DividerItemDecoration(this, layoutManager.getOrientation());
         Drawable drawable = getDrawable(R.drawable.custom_divider);
         decoration.setDrawable(drawable);
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(decoration);
         SlideTypeRoomAdapter adapter = new SlideTypeRoomAdapter(this, list);
         recyclerView.setAdapter(adapter);
         recyclerView.setHasFixedSize(true);
@@ -99,14 +111,17 @@ public class ActivityInfoHotel extends AppCompatActivity {
         SlideHotelAdapter adapter = new SlideHotelAdapter(getApplicationContext(), list);
         tabLayout.setupWithViewPager(viewPager);
         viewPager.setAdapter(adapter);
-
+        tabLayout.setupWithViewPager(viewPager);
+        lblAddressHotel.setVisibility(View.VISIBLE);
     }
 
     private void init() {
         viewPager = findViewById(R.id.view_pager_hotel);
-        tabLayout = findViewById(R.id.tab_slide);
+        tabLayout = findViewById(R.id.tab);
         recyclerView = findViewById(R.id.list_type_room);
-        idHotel = getIntent().getIntExtra("idHotel", 0);
+        lblNameHotel = findViewById(R.id.lbl_name_hotel);
+        lblAddressHotel = findViewById(R.id.lbl_address_hotel);
+        hotel = (Hotel) getIntent().getSerializableExtra("hotel");
     }
 
     private void getImageHotel(String murl) {
@@ -145,7 +160,7 @@ public class ActivityInfoHotel extends AppCompatActivity {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> param = new HashMap<>();
-                        param.put("idHotel", String.valueOf(idHotel));
+                        param.put("idHotel", String.valueOf(hotel.getIdHotel()));
                         return param;
                     }
                 };
@@ -192,7 +207,7 @@ public class ActivityInfoHotel extends AppCompatActivity {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> param = new HashMap<>();
-                        param.put("idHotel", String.valueOf(idHotel));
+                        param.put("idHotel", String.valueOf(hotel.getIdHotel()));
                         return param;
                     }
                 };

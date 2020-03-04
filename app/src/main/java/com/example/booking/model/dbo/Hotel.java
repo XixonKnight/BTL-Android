@@ -1,6 +1,8 @@
 package com.example.booking.model.dbo;
 
-public class Hotel {
+import java.io.Serializable;
+
+public class Hotel implements Serializable {
     private int idHotel;
     private int idArea;
     private String name;

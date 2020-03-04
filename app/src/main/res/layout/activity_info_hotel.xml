@@ -6,32 +6,28 @@
     android:layout_height="wrap_content"
     tools:context=".activity.ActivityInfoHotel">
 
-    <!--    <androidx.recyclerview.widget.RecyclerView-->
-    <!--        android:id="@+id/list_info_hotel"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content">-->
-    <!--    </androidx.recyclerview.widget.RecyclerView>-->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TableRow
-            android:weightSum="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:weightSum="1">
 
             <RelativeLayout
-                android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="250dp">
+                android:layout_height="250dp"
+                android:layout_weight="1">
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/view_pager_hotel"
                     android:layout_width="match_parent"
                     android:layout_height="250dp" />
 
+
                 <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tab_slide"
+                    android:id="@+id/tab"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@+id/view_pager_hotel"
@@ -40,18 +36,53 @@
                     android:layout_marginBottom="0dp"
                     app:tabBackground="@drawable/indicator_flag"
                     app:tabGravity="center" />
+
+
             </RelativeLayout>
+
         </TableRow>
-        <TableRow
-            android:weightSum="1"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_pager_hotel"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lbl_name_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_pager_hotel"
+                android:textColor="@color/colorBlue"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/lbl_address_hotel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_pager_hotel"
+                android:drawableStart="@drawable/icon_address"
+                android:visibility="invisible"
+                android:drawablePadding="10dp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <TableRow>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/list_type_room"
-                android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content">
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_height="wrap_content"
+                android:layout_weight="1"></androidx.recyclerview.widget.RecyclerView>
 
         </TableRow>
     </TableLayout>
