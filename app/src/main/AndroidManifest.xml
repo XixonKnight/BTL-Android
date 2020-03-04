@@ -14,7 +14,8 @@
         android:roundIcon="@drawable/icon_app"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
-        <activity android:name=".activity.ActivityInfoHotel"></activity>
+        <activity android:name=".activity.ActivityBookRoom"></activity>
+        <activity android:name=".activity.ActivityInfoHotel" />
         <activity android:name=".activity.ActivityChangePassword" />
         <activity android:name=".activity.ActivitySetupNewPassword" />
         <activity android:name=".activity.ActivityCheckMailForgot" />
