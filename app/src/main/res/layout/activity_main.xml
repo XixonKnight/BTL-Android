@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
     <ImageView
+        android:scaleType="centerCrop"
         android:id="@+id/bgd_main"
         android:src="@drawable/bgd_main"
         android:layout_width="match_parent"

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -215,6 +216,11 @@ public class ActivityInfoHotel extends AppCompatActivity {
             }
         });
         thread.start();
+    }
+    public void setClickTypeRoom(TypeRoom typeRoom){
+        Intent intent = new Intent(getApplicationContext(),ActivityBookRoom.class);
+        intent.putExtra("typeRoom",typeRoom);
+        startActivity(intent);
     }
 
 }

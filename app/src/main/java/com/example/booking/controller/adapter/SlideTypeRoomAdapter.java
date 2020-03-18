@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.booking.R;
+import com.example.booking.activity.ActivityInfoHotel;
 import com.example.booking.model.TypeRoom;
 
 import java.util.List;
@@ -63,6 +64,11 @@ public class SlideTypeRoomAdapter extends RecyclerView.Adapter<SlideTypeRoomAdap
             imageView = itemView.findViewById(R.id.image_type_room);
             lblNameTypeRoom = itemView.findViewById(R.id.lbl_name_type_room);
             lblPrice = itemView.findViewById(R.id.lbl_price);
+
+            itemView.setOnClickListener( v -> {
+                TypeRoom typeRoom = list.get(getAdapterPosition());
+                ((ActivityInfoHotel)context).setClickTypeRoom(typeRoom);
+            });
         }
     }
 }

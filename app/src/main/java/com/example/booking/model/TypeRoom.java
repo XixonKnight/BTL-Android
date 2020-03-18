@@ -1,6 +1,8 @@
 package com.example.booking.model;
 
-public class TypeRoom {
+import java.io.Serializable;
+
+public class TypeRoom implements Serializable {
     private int image;
     private String lblName;
     private int price;

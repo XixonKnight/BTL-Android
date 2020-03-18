@@ -90,11 +90,6 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list_service"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"></androidx.recyclerview.widget.RecyclerView>
         </TableRow>
     </TableLayout>
 
