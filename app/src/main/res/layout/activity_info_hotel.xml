@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".activity.ActivityInfoHotel">
 
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -88,7 +89,37 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="1">
+            android:weightSum="4">
+<!--            <LinearLayout-->
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/service1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/service2" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/service3" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/service3" />
+
 
         </TableRow>
     </TableLayout>
