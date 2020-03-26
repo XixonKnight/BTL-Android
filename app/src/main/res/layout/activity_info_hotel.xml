@@ -6,7 +6,6 @@
     android:layout_height="wrap_content"
     tools:context=".activity.ActivityInfoHotel">
 
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -25,8 +24,6 @@
                     android:id="@+id/view_pager_hotel"
                     android:layout_width="match_parent"
                     android:layout_height="250dp" />
-
-
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/tab"
                     android:layout_width="match_parent"
@@ -37,8 +34,6 @@
                     android:layout_marginBottom="0dp"
                     app:tabBackground="@drawable/indicator_flag"
                     app:tabGravity="center" />
-
-
             </RelativeLayout>
 
         </TableRow>
@@ -69,11 +64,7 @@
                 android:visibility="invisible" />
 
         </LinearLayout>
-
-        <TableRow>
-
-        </TableRow>
-
+        
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,15 +74,14 @@
                 android:id="@+id/list_type_room"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"></androidx.recyclerview.widget.RecyclerView>
+                android:layout_weight="1">
+            </androidx.recyclerview.widget.RecyclerView>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="4">
-<!--            <LinearLayout-->
-
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="100dp"
@@ -119,8 +109,51 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:src="@drawable/service3" />
+        </TableRow>
+        <TableRow>
+            <RelativeLayout
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/avt_cmt"
+                    android:layout_width="wrap_content"
+                    app:cardCornerRadius="25dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/icon_avt"
+                        android:src="@drawable/avatar_default"
+                        android:scaleType="centerCrop"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+                </androidx.cardview.widget.CardView>
+                <EditText
+                    android:id="@+id/ed_cmt"
+                    android:layout_toRightOf="@id/avt_cmt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_marginTop="20dp"
+                    android:text="Gửi"
+                    android:textAllCaps="false"
+                    android:textSize="35sp"
+                    android:layout_width="150dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/ed_cmt"
+                    style="@style/btn_event"/>
+            </RelativeLayout>
+        </TableRow>
 
+        <TableRow android:layout_width="match_parent">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_cmt"
+                android:layout_width="339dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"></androidx.recyclerview.widget.RecyclerView>
         </TableRow>
     </TableLayout>
 
