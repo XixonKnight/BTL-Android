@@ -489,6 +489,7 @@ public class ActivityCustomer extends AppCompatActivity {
     public void setClickRecyclerView(Hotel hotel) {
         Intent intent = new Intent(this, ActivityInfoHotel.class);
         intent.putExtra("hotel", hotel);
+        intent.putExtra("customer", customer);
         startActivity(intent);
     }
 }

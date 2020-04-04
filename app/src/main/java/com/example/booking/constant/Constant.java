@@ -39,6 +39,6 @@ public class Constant {
     public static final String URL_SELECT_ALL_DATA_HOTEL = "https://xixonknight.000webhostapp.com/query_booking_room/SelectAllHotel.php";
     public static final String URL_SELECT_IMAGE_HOTEL = "https://xixonknight.000webhostapp.com/query_booking_room/SelectImageHotel.php";
     public static final String URL_SELECT_TYPE_ROOM = "https://xixonknight.000webhostapp.com/query_booking_room/SelectTypeRoom.php";
-
-
+    public static final String URL_INSERT_CMT = "https://xixonknight.000webhostapp.com/query_booking_room/InsertCmt.php";
+    public static final String URL_GET_CMT_BY_HOTEL = "https://xixonknight.000webhostapp.com/query_booking_room/GetAllCommentByHotel.php";
 }
