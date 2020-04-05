@@ -113,6 +113,8 @@ public class ActivityInfoHotel extends AppCompatActivity {
                         progressDialog.dismiss();
                         if (response.equals("Successfully")) {
                             Toast.makeText(ActivityInfoHotel.this, "Comment thành công", Toast.LENGTH_SHORT).show();
+                            loadComment();
+                            ed_cmt.setText("");
                         } else {
                             Toast.makeText(ActivityInfoHotel.this, "Comment thất bại", Toast.LENGTH_SHORT).show();
                         }
@@ -134,6 +136,11 @@ public class ActivityInfoHotel extends AppCompatActivity {
             }
         };
         requestQueue.add(stringRequest);
+    }
+
+    private void loadComment() {
+        listComment.add(0,new CommentOfCustomer(customer.getAvatar(),ed_cmt.getText().toString()));
+        customComment(listComment);
     }
 
     private void setupIconAvt(Customer customer) {

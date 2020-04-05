@@ -126,6 +126,17 @@
 
         <TableRow>
 
+            <TextView
+                android:text="Đánh giá khách sạn"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,12 +190,13 @@
         </TableRow>
 
         <TableRow android:layout_width="match_parent">
+
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginTop="20dp"
                 android:id="@+id/list_cmt"
                 android:layout_width="339dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"></androidx.recyclerview.widget.RecyclerView>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"></androidx.recyclerview.widget.RecyclerView>
         </TableRow>
     </TableLayout>
 
