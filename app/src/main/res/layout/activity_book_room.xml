@@ -19,109 +19,11 @@
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
-        android:id="@+id/listService"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image_type_room"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/service1" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Wifi"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/service2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Smart TV"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/service2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Smart TV"
-                android:textSize="25sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/service2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Smart TV"
-                android:textSize="25sp" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/infoTypeRoom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/listService"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/image_type_room"
+        android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:paddingLeft="10dp">
 
@@ -173,7 +75,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/edCountRoom"
+        android:id="@+id/edCountPerson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/infoTypeRoom"
@@ -183,14 +85,62 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Số lượng:"
+            android:text="Số Người:"
             android:textSize="25sp" />
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/btnLessPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/countPerson"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/btnPlusPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edCountRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edCountPerson"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Phòng:"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
 
             <Button
                 android:id="@+id/btnLess"
@@ -201,12 +151,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:text="1"
-                android:gravity="center"
                 android:id="@+id/countRoom"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:inputType="number" />
+                android:gravity="center"
+                android:inputType="number"
+                android:text="1" />
 
             <Button
                 android:id="@+id/btnPlus"
@@ -219,31 +169,74 @@
     </LinearLayout>
 
     <LinearLayout
-        android:gravity="right"
-        android:layout_marginTop="30dp"
-        android:orientation="horizontal"
-        android:paddingRight="20dp"
+        android:id="@+id/dateRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/edCountRoom">
+        android:layout_below="@+id/edCountRoom"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
         <TextView
-            android:text="Giá (VND): "
-            android:textSize="20sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Ngày đến :"
+            android:textSize="25sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+
+            <EditText
+                android:id="@+id/edDateRegister"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="dd/MM/yyyy"
+                android:inputType="number"/>
+
+            <ImageButton
+                android:id="@+id/btnSetDateRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_date"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateRegister"
+        android:layout_marginTop="30dp"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá (VND): "
+            android:textSize="20sp" />
+
         <TextView
             android:id="@+id/price"
-            android:text="20000"
-            android:textSize="20sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="20000"
+            android:textSize="20sp" />
     </LinearLayout>
+
     <Button
         android:id="@+id/btnRegister"
+        style="@style/btn_event"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Đăng ký"
         android:layout_marginBottom="20dp"
-        style="@style/btn_event"/>
+        android:text="Đặt Phòng" />
 
 </RelativeLayout>

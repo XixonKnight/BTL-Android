@@ -173,7 +173,7 @@ public class ActivityInfoCustomer extends AppCompatActivity {
 
     private void setInfoCustomer(Customer customer) {
         SimpleDateFormat format = new SimpleDateFormat(Constant.FORMAT_DATE);
-        if (customer.getAvatar().equals("null")) {
+        if (customer.getAvatar().equals("null")||customer.getAvatar().isEmpty()) {
             avatar_customer.setImageResource(R.drawable.avatar_default);
         } else {
             Picasso.get().load(customer.getAvatar()).into(avatar_customer);

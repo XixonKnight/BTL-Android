@@ -345,7 +345,7 @@ public class ActivityCustomer extends AppCompatActivity {
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> param = new HashMap<>();
                         param.put("gmail", getNameGmail(gmail));
-                        return super.getParams();
+                        return param;
                     }
                 };
                 requestQueue.add(stringRequest);
