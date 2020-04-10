@@ -160,7 +160,6 @@ public class ActivityCustomer extends AppCompatActivity {
         recyclerView.setAdapter(adapterHotel);
     }
 
-
     private void customSpinnerArea(List<String> list) {
         list.add(0, "Chọn khu vực");
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, list);

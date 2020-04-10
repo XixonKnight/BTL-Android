@@ -292,6 +292,7 @@ public class ActivityInfoHotel extends AppCompatActivity {
                                     JSONArray jsonArray = new JSONArray(response);
                                     for (int i = 0; i < jsonArray.length(); i++) {
                                         list.add(new TypeRoom(
+                                                jsonArray.getJSONObject(i).getInt("id"),
                                                 jsonArray.getJSONObject(i).getString("nameType"),
                                                 jsonArray.getJSONObject(i).getInt("price")
                                         ));
@@ -328,6 +329,8 @@ public class ActivityInfoHotel extends AppCompatActivity {
     public void setClickTypeRoom(TypeRoom typeRoom) {
         Intent intent = new Intent(getApplicationContext(), ActivityBookRoom.class);
         intent.putExtra("typeRoom", typeRoom);
+        intent.putExtra("hotel",hotel);
+        intent.putExtra("customer",customer);
         startActivity(intent);
     }
 

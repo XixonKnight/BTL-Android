@@ -3,6 +3,7 @@ package com.example.booking.model;
 import java.io.Serializable;
 
 public class TypeRoom implements Serializable {
+    private int id;
     private int image;
     private String lblName;
     private int price;
@@ -10,15 +11,18 @@ public class TypeRoom implements Serializable {
     public TypeRoom() {
     }
 
-    public TypeRoom(String lblName, int price) {
+    public TypeRoom(int id, String lblName, int price) {
+        this.id = id;
         this.lblName = lblName;
         this.price = price;
     }
 
-    public TypeRoom(int image, String lblName, int price) {
-        this.image = image;
-        this.lblName = lblName;
-        this.price = price;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getImage() {
