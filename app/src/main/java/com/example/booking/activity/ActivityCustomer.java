@@ -310,6 +310,12 @@ public class ActivityCustomer extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     }
+                    case R.id.history:{
+                        Intent intent = new Intent(getApplicationContext(),ActivityHistory.class);
+                        intent.putExtra("customer",customer);
+                        startActivity(intent);
+                        break;
+                    }
                 }
                 return true;
             }

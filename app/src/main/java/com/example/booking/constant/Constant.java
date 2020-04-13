@@ -43,4 +43,5 @@ public class Constant {
     public static final String URL_GET_CMT_BY_HOTEL = "https://xixonknight.000webhostapp.com/query_booking_room/GetAllCommentByHotel.php";
     public static final String URL_GET_CODE_ROOM = "https://xixonknight.000webhostapp.com/query_booking_room/GetCodeRoom.php";
     public static final String URL_BOOK_ROOM = "https://xixonknight.000webhostapp.com/query_booking_room/RegisterRoom.php";
+    public static final String URL_GET_LIST_HISTORY_BY_CUSTOMER = "https://xixonknight.000webhostapp.com/query_booking_room/GetListHistoryByCustomer.php";
 }

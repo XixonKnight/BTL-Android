@@ -15,4 +15,9 @@
         android:drawablePadding="10dp"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listHistory"
+        android:layout_below="@+id/lblHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>
