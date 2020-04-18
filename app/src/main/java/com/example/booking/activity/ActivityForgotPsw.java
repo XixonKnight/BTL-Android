@@ -31,6 +31,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ActivityForgotPsw extends AppCompatActivity {
+    private static final int MAX = 999999;
+    private static final int MIN = 100000;
     private TextInputLayout layoutGmail;
     private Button btnForgot;
     private ProgressDialog progressDialog;
@@ -87,7 +89,7 @@ public class ActivityForgotPsw extends AppCompatActivity {
                     public void onResponse(String response) {
                         if (response.toString().equals("Successfully")) {
                             progressDialog.dismiss();
-                            int codeAccept = new RandomCode().randomCode(100000, 999999);
+                            int codeAccept = new RandomCode().randomCode(MIN, MAX);
                             new SendGmail().send(String.valueOf(codeAccept), layoutGmail.getEditText().getText().toString());
                             Intent intent = new Intent(ActivityForgotPsw.this, ActivityCheckMailForgot.class);
                             intent.putExtra("codeAccept", codeAccept);
